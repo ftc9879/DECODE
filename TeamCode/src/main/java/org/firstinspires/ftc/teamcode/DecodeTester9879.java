@@ -1,5 +1,57 @@
 package org.firstinspires.ftc.teamcode;
 
+/**
+ * ================================================================================
+ * DECODE TESTER 9879 - CONTROL MAPPING AND HARDWARE CONFIGURATION
+ * ================================================================================
+ *
+ * GAMEPAD A (gamepad1) CONTROLS:
+ * ------------------------------
+ * Left Stick Y       -> Drive forward/backward (mecanum drive)
+ * Left Stick X       -> Strafe left/right (mecanum drive)
+ * Right Stick X      -> Rotation (mecanum drive)
+ * Button A           -> Toggle supporting motor HIGH position (target: 2000 encoder ticks)
+ * Button B           -> Toggle supporting motor LOW position (target: 0 encoder ticks)
+ *
+ * GAMEPAD B (gamepad2) CONTROLS:
+ * ------------------------------
+ * Button A           -> Toggle intake motor FORWARD (power: 0.5)
+ * Button B           -> Toggle intake motor REVERSE (power: -0.5)
+ * Button X           -> Toggle transfer servo position (0.0 <-> 0.5)
+ * Button Y           -> Toggle transfer servo position (0.0 <-> 0.5)
+ * Left Bumper        -> Toggle spinner motor FORWARD (power: 0.5)
+ * Right Bumper       -> Toggle spinner motor REVERSE (power: -0.5)
+ * Left Trigger       -> STOP intake motor (clears both intake toggles)
+ * Right Trigger      -> STOP spinner motor (clears both spinner toggles)
+ * D-pad Down         -> EMERGENCY STOP ALL (resets all toggles and stops all motors)
+ *
+ * HARDWARE PORT CONFIGURATION:
+ * ----------------------------
+ * NOTE: Port assignments are defined in the FTC Robot Controller configuration file.
+ * The configuration names below must match those in your robot configuration:
+ *
+ * MOTORS (DcMotor):
+ *   "drive_back_left"   -> Back left mecanum wheel (REVERSE direction)
+ *   "drive_back_right"  -> Back right mecanum wheel (FORWARD direction)
+ *   "drive_front_left"  -> Front left mecanum wheel (REVERSE direction)
+ *   "drive_front_right" -> Front right mecanum wheel (FORWARD direction)
+ *   "spinner"           -> Spinner mechanism motor (FORWARD direction)
+ *   "intake"            -> Intake mechanism motor (FORWARD direction)
+ *   "supporting"        -> Supporting arm motor (FORWARD direction, RUN_TO_POSITION mode)
+ *
+ * SERVOS:
+ *   "transfer"          -> Transfer servo (range: 0.0 to 0.5)
+ *
+ * SENSORS:
+ *   "color_sensor_1"    -> ColorSensor (first color sensor)
+ *   "color_sensor_2"    -> ColorSensor (second color sensor)
+ *
+ * ODOMETRY:
+ *   Odometry pods are assumed to connect via a pinpoint device (acknowledged but not used).
+ *
+ * ================================================================================
+ */
+
 // Checklist:
 // - Outline hardware mapping and acknowledge odometry pods.
 // - Implement mecanum drive with gamepad1 joysticks and safe motor handling.
